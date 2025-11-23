@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/denoland/deno/main/cli/schemas/config-file.v1.json",
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "strict": true
+  },
+  "tasks": {
+    "dev": "deno run -A --watch server.ts",
+    "start": "deno run -A server.ts"
+  },
+  "unstable": [
+    "unsafe-proto",
+    "sloppy-imports",
+    "kv"
+  ],
+  "imports": {
+    "youtubei.js": "npm:youtubei.js@^16.0.1",
+    "esbuild": "npm:esbuild@^0.25.5"
+  },
+  "nodeModulesDir": "auto"
+}
