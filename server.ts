@@ -30,7 +30,11 @@ Deno.serve(async (req: Request) => {
             esbuild.stop();
         }
 
-        return new Response(code, { status: 200 });
+        const headers = new Headers(
+        {
+            "cache-control": "public, max-age=86400"
+        });
+        return new Response(code, { status: 200, headers });
     } catch (error) {
         return new Response(`${error}`, { status: 500 });
     }
