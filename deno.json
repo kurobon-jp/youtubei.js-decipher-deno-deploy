@@ -18,7 +18,7 @@
     "kv"
   ],
   "imports": {
-    "youtubei.js": "npm:youtubei.js@^16.0.1",
+    "youtubei.js": "npm:youtubei.js@^17.0.1",
     "esbuild": "npm:esbuild@^0.25.5"
   },
   "nodeModulesDir": "auto"
