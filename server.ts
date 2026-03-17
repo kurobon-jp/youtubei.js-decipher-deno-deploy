@@ -26,7 +26,7 @@ Deno.serve(async (req: Request) => {
                 minifySyntax: true,
             });
             code = result.code;
-            await kv.set(playerId, code, 3600);
+            // await kv.set(playerId, code, 3600);
             esbuild.stop();
         }
 
