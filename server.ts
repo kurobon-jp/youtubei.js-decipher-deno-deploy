@@ -35,7 +35,8 @@ Deno.serve(async (req: Request) => {
 
         const headers = new Headers(
         {
-            "cache-control": "public, max-age=86400"
+            "cache-control": "public, max-age=86400",
+            "content-encoding": "gzip"
         });
 
         return new Response(buffer, { status: 200, headers });

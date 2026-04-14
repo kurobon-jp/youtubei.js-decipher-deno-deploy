@@ -29,7 +29,7 @@ class LocalKV implements KV {
     async get(key: string): Promise<any> {
         try {
             const path = this.getPath(key);
-            return await Deno.readTextFile(path);
+            return await Deno.readFile(path);
         } catch {
             return undefined;
         }
@@ -41,7 +41,7 @@ class LocalKV implements KV {
         }
         const path = this.getPath(key);
         if (!await this.exists(path)) {
-            await Deno.writeTextFile(path, value, { createNew: true });
+            await Deno.writeFile(path, Buffer.from(value), { createNew: true });
         }
     }
 }
